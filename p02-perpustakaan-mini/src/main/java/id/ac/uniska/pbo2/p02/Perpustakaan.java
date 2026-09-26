@@ -71,4 +71,16 @@ public class Perpustakaan {
     public List<Koleksi> getDaftarKoleksi() {
         return List.copyOf(daftarKoleksi);
     }
+    
+    /** Mencari koleksi berdasarkan kata kunci pada judul (tidak membedakan huruf besar/kecil). */
+    public List<Koleksi> cariJudul(String kataKunci) {
+        List<Koleksi> hasilPencarian = new ArrayList<>();
+        String keyword = kataKunci.toLowerCase();
+        for (Koleksi k : daftarKoleksi) {
+            if (k.getJudul().toLowerCase().contains(keyword)) {
+                hasilPencarian.add(k);
+            }
+        }
+        return hasilPencarian;
+    }
 }
