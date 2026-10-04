@@ -4,6 +4,11 @@
  */
 package id.ac.uniska.pbo2.p03;
 
+import javax.swing.JOptionPane;
+import javax.swing.JCheckBox;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ACER
@@ -37,15 +42,15 @@ public class FormTiketTravel extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         namapemesananField = new javax.swing.JTextField();
         nomorhpField = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        ekonomiButton = new javax.swing.JRadioButton();
+        kotaCombo = new javax.swing.JComboBox<>();
+        ekonomiRadio = new javax.swing.JRadioButton();
         bagasiCheck = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        catatanText = new javax.swing.JTextArea();
         tombolpesanButton = new javax.swing.JButton();
         modegelapToggle = new javax.swing.JToggleButton();
-        bisnisButton = new javax.swing.JRadioButton();
-        eksekutifButton = new javax.swing.JRadioButton();
+        bisnisRadio = new javax.swing.JRadioButton();
+        eksekutifRadio = new javax.swing.JRadioButton();
         makanCheck = new javax.swing.JCheckBox();
         asuransiCheck = new javax.swing.JCheckBox();
 
@@ -56,16 +61,16 @@ public class FormTiketTravel extends javax.swing.JFrame {
 
         nomorhpField.setText("Nomor HP");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banjarbaru", "Martapura", "Palangka Raya", "Samarinda", "Balikpapan" }));
+        kotaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banjarbaru", "Martapura", "Palangka Raya", "Samarinda", "Balikpapan" }));
 
-        ekonomiButton.setText("Ekonomi");
+        ekonomiRadio.setText("Ekonomi");
 
         bagasiCheck.setText("Bagasi");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(3);
-        jTextArea1.setText("\n");
-        jScrollPane1.setViewportView(jTextArea1);
+        catatanText.setColumns(20);
+        catatanText.setRows(3);
+        catatanText.setText("\n");
+        jScrollPane1.setViewportView(catatanText);
 
         tombolpesanButton.setText("Tombol Pesan");
         tombolpesanButton.addActionListener(this::tombolpesanButtonActionPerformed);
@@ -73,9 +78,10 @@ public class FormTiketTravel extends javax.swing.JFrame {
         modegelapToggle.setText("Mode Gelap");
         modegelapToggle.addActionListener(this::modegelapToggleActionPerformed);
 
-        bisnisButton.setText("Bisnis");
+        bisnisRadio.setText("Bisnis");
 
-        eksekutifButton.setText("Eksekutif");
+        eksekutifRadio.setText("Eksekutif");
+        eksekutifRadio.addActionListener(this::eksekutifRadioActionPerformed);
 
         makanCheck.setText("Makan");
 
@@ -101,14 +107,14 @@ public class FormTiketTravel extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(asuransiCheck))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(ekonomiButton)
+                        .addComponent(ekonomiRadio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(bisnisButton)
+                        .addComponent(bisnisRadio)
                         .addGap(18, 18, 18)
-                        .addComponent(eksekutifButton))
+                        .addComponent(eksekutifRadio))
                     .addComponent(namapemesananField)
                     .addComponent(nomorhpField)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(kotaCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -120,12 +126,12 @@ public class FormTiketTravel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(nomorhpField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kotaCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ekonomiButton)
-                    .addComponent(bisnisButton)
-                    .addComponent(eksekutifButton))
+                    .addComponent(ekonomiRadio)
+                    .addComponent(bisnisRadio)
+                    .addComponent(eksekutifRadio))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bagasiCheck)
@@ -166,15 +172,19 @@ public class FormTiketTravel extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolpesanButtonActionPerformed
 
     private void modegelapToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modegelapToggleActionPerformed
-        boolean gelap = temaToggle.isSelected();
+        boolean gelap = modegelapToggle.isSelected();
         if (gelap) {
             com.formdev.flatlaf.FlatDarkLaf.setup();
         } else {
             com.formdev.flatlaf.FlatLightLaf.setup();
         }
         com.formdev.flatlaf.FlatLaf.updateUI();
-        temaToggle.setText(gelap ? "Mode Terang" : "Mode Gelap");        // TODO add your handling code here:
+        modegelapToggle.setText(gelap ? "Mode Terang" : "Mode Gelap");        // TODO add your handling code here:
     }//GEN-LAST:event_modegelapToggleActionPerformed
+
+    private void eksekutifRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eksekutifRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eksekutifRadioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,13 +214,13 @@ public class FormTiketTravel extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox asuransiCheck;
     private javax.swing.JCheckBox bagasiCheck;
-    private javax.swing.JRadioButton bisnisButton;
+    private javax.swing.JRadioButton bisnisRadio;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JRadioButton ekonomiButton;
-    private javax.swing.JRadioButton eksekutifButton;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextArea catatanText;
+    private javax.swing.JRadioButton ekonomiRadio;
+    private javax.swing.JRadioButton eksekutifRadio;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JComboBox<String> kotaCombo;
     private javax.swing.JCheckBox makanCheck;
     private javax.swing.JToggleButton modegelapToggle;
     private javax.swing.JTextField namapemesananField;

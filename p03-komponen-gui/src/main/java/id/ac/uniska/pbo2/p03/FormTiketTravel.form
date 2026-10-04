@@ -45,15 +45,15 @@
                       <Component id="asuransiCheck" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="ekonomiButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="ekonomiRadio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bisnisButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="bisnisRadio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="eksekutifButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="eksekutifRadio" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="namapemesananField" alignment="0" max="32767" attributes="0"/>
                   <Component id="nomorhpField" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jComboBox1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="kotaCombo" alignment="0" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" alignment="0" pref="347" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -68,12 +68,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="nomorhpField" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="kotaCombo" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="22" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ekonomiButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="bisnisButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="eksekutifButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ekonomiRadio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bisnisRadio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="eksekutifRadio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -107,7 +107,7 @@
         <Property name="text" type="java.lang.String" value="Nomor HP"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="kotaCombo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="5">
@@ -123,7 +123,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="ekonomiButton">
+    <Component class="javax.swing.JRadioButton" name="ekonomiRadio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ekonomi"/>
       </Properties>
@@ -140,7 +140,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="catatanText">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="3"/>
@@ -165,15 +165,18 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modegelapToggleActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="bisnisButton">
+    <Component class="javax.swing.JRadioButton" name="bisnisRadio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bisnis"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="eksekutifButton">
+    <Component class="javax.swing.JRadioButton" name="eksekutifRadio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eksekutif"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eksekutifRadioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="makanCheck">
       <Properties>
