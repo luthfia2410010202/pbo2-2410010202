@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package id.ac.uniska.pbo2;
-
+import com.formdev.flatlaf.FlatLightLaf;
 /**
  *
  * @author ACER
@@ -29,8 +29,8 @@ public class FormBiodata extends javax.swing.JFrame {
     getRootPane().setDefaultButton(simpanButton); 
     
      pack();                      // hitung ulang ukuran setelah gaya huruf berubah 
-       // jendela tidak dapat dikecilkan melebihi ukuran awal 
-    setLocationRelativeTo(null); 
+     setMinimumSize(getSize());   // jendela tidak dapat dikecilkan melebihi ukuran awal 
+     setLocationRelativeTo(null); 
     }
 
     /**
@@ -86,6 +86,7 @@ public class FormBiodata extends javax.swing.JFrame {
 
         isiPanel.setLayout(new java.awt.BorderLayout());
 
+        formPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
         formPanel.setLayout(new java.awt.GridBagLayout());
 
         dataDiriLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -252,22 +253,8 @@ public class FormBiodata extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        // Blok Nimbus buatan NetBeans diganti dengan tema FlatLaf 
+    FlatLightLaf.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new FormBiodata().setVisible(true));
