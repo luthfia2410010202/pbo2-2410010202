@@ -1,0 +1,7 @@
+Eksperimen praktikum 4
+
+1. dia tetap sama ikut melebar
+
+2. saat di posisi north ketika di Tarik ke atas atau Bawah dia tetap menempel di frame, sedangkan posisi center ketika di Tarik ke atas atau Bawah dia mengikuti tarikan tersebut
+
+3. yg rusak lebih dulu ialah kotak alamat jadi gepeng
