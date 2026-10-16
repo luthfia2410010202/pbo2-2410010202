@@ -1,0 +1,7 @@
+eksperimen praktikum 2
+
+1. saat dikecilkan jendelanya dia tetap ditengah jadi simetris dan yg berubah baris ini "flowPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER));".
+
+2. Jumlah baris akan terbentuk secara otomatis menyesuaikan jumlah komponen yang ada dengan pembagian 2 kolom. Alasannya karena nilai Rows diatur ke 0 yang bersifat fleksibel/otomatis.
+
+3. Lebar keempat tombol akan ikut besar memenuhi lebar penuh kontainer secara horizontal. Penambahan Vertical Strut memberikan jarak kosong vertikal dengan ukuran tetap di antara tombol-tombol.
