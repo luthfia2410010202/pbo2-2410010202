@@ -1,0 +1,17 @@
+1. Mengapa Null Layout dan Absolute Layout sebaiknya dihindari?
+membuat tampilan aplikasi tidak responsif (kaku tidak bisa menyesuaikan diri) dan mudah rusak saat dibuka di perangkat yang lain.
+
+2. Perbedaan perilaku FlowLayout dan GridLayout saat jendela dilebarkan.
+- flowlayout adalah susunannya ke samping dan kalo sudah tidak muat dia akan otomatis turun ke bawah.
+- GridLayout adalah layout yang menyusun komponen dari kiri ke kanan dalam bentuk baris dan kolom yang sama rata besar kecilnya. Dia mengunci jumlah baris dan kolom di dalam frame tersebut. Jadi, jika frame dikecilkan atau dibesarkan, ukuran komponennya akan otomatis mengikuti ukuran frame."
+
+3. Fungsi Weight X dan Fill pada GridBagLayout.
+- Fungsi weightx itu buat nentukan apakah komponen tersebut berhak dapat jatah ruang kosong ke samping atau tidak saat frame dilebarkan. Kalau diset 0.0 pas framenya dilebarkan dia bakal menghiraukan dan ukurannya tetap begitu saja. Tapi kalau diset 1.0 dia bakal dapat jatah ruang kosong itu jadi posisinya bisa ikut melebar mengikuti frame.
+- Fungsi fill itu buat nentukan bentuk komponennya mau ikutan melar atau tidak untuk ngisi ruang kosong tadi. Contohnya kalau diset horizontal, bentuknya bakal melar ke samping memenuhi ukuran frame
+
+4. Mengapa formPanel dibungkus isiPanel dan diletakkan di North?
+agar tampilannya tetap rapi saat frame dibesarkan atau dikecilkan
+
+5. Dua prinsip desain pada Form Anggota Perpustakaan.
+- Keselarasan: label berada di kolom 0 (Anchor West) dan semua isian di kolom 1, sehingga keduanya membentuk garis lurus dari atas ke bawah. Seperti terlihat pada tangkapan layar form: label NPM sampai Alamat sejajar rata kiri, dan tepi kiri isian sejajar.
+- Kedekatan: isian yang berkaitan dikelompokkan dengan judul bagian, yaitu Data Anggota, Kontak, dan Persetujuan. Setiap bagian diberi bold, sehingga pengelompokan terlihat jelas.
