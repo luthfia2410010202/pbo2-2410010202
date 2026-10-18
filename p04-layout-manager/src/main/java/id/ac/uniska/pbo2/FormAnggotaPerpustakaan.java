@@ -88,7 +88,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         judulLabel.setText("Form Anggota Perpustakaan");
         headerPanel.add(judulLabel);
 
-        keteranganLabel.setText("Silakan isi data dengan benar");
+        keteranganLabel.setText("Silakan isi data keanggotaan dengan benar");
         headerPanel.add(keteranganLabel);
 
         getContentPane().add(headerPanel, java.awt.BorderLayout.NORTH);
@@ -167,13 +167,15 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(4, 80, 4, 0);
         formPanel.add(mahasiswaRadio, gridBagConstraints);
 
         dosenRadio.setText("Dosen");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(dosenRadio, gridBagConstraints);
@@ -184,7 +186,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 185, 4, 0);
         formPanel.add(umumRadio, gridBagConstraints);
 
         kontakLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -233,7 +235,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(alamatLabel, gridBagConstraints);
 
