@@ -5,16 +5,6 @@
 ### Deskripsi Tugas
 Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 
-### Tabel rancangan
-___________________________
-| Bagian | Panel | Layout |
-| ------ | ----- | ------ |
-| Jendela | JFrame | BorderLayout
-| Header (North) | headerPanel | BoxLayout, Y Axis
-| Pembungkus (Center) | isiPanel | BordeLayout
-| Isi form (North di isiPanel) | formPanel | GidBagLayout
-| Tombol (South) | tombolPanel | FlowLayout, Right
-
 ### Screenshot hasil
 ![Mode terang](p03-komponen-gui/tiket%20travel%20mode%20terang.png)
 
@@ -30,6 +20,16 @@ ___________________________
 ### Refleksi
 [Refleksi bagian G](p04-layout-manager/refleksi%20bagian%20G.txt)
 
+### Tabel rancangan
+___________________________
+| Bagian | Panel | Layout |
+| ------ | ----- | ------ |
+| Jendela | JFrame | BorderLayout
+| Header (North) | headerPanel | BoxLayout, Y Axis
+| Pembungkus (Center) | isiPanel | BordeLayout
+| Isi form (North di isiPanel) | formPanel | GidBagLayout
+| Tombol (South) | tombolPanel | FlowLayout, Right
+
 ### Screenshot hasil dan foto
 ![Foto sketsa](p04-layout-manager/foto%20sketsa.jpeg)
 
@@ -37,7 +37,7 @@ ___________________________
 
 ![Ukuran awal](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20awal.png)
 
-![Saat dilebarkan](p04-layout-manager/Hasil%20form%20anggota%20perpustakaan%20dilebarkan.png)
+![Saat dilebarkan](p04-layout-manager/Hasil%20form%20anggota%20pepustakaan%20dilebarkan.png)
 
 ### Eksperimen
 [Praktikum 2](p04-layout-manager/eksperimen%20praktikum%202.txt)
