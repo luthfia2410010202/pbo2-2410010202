@@ -5,6 +5,15 @@
 ### Deskripsi Tugas
 Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 
+### Tabel rancangan
+___________________________
+| Bagian | Panel | Layout |
+| ------ | ----- | ------ |
+| Jendela |
+| Header |
+| Isi form |
+| Tombol |
+
 ### Screenshot hasil
 ![Mode terang](p03-komponen-gui/tiket%20travel%20mode%20terang.png)
 
