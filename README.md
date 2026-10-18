@@ -45,6 +45,7 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 
 ### Penilaian dan saan dari teman
 | No | Pemeriksaan | Ya atau Belum
+| -- | ----------- | --------------
 | 1 | Label singkat, jelas, dan sejajar 
 | 2 | Isian dikelompokkan dengan judul bagian 
 | 3 | Placeholder dipakai untuk isian yang punya format 
