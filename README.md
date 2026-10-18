@@ -53,8 +53,7 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 | 5 | Tombol utama menonjol dan berada di kanan bawah 
 | 6 | Jarak antar komponen konsisten 
 | 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan 
-| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null 
-| Layout atau Absolute Layout | 
+| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout  
 
 Saran : 
 
