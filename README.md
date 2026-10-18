@@ -52,7 +52,7 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 | 4 | Komponen sesuai jenis data | Ya |
 | 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
 | 6 | Jarak antar komponen konsisten | Ya |
-| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Ya |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Ya  (tampilan tetap rapi saat jendela diperlebar, tetapi saat ditinggikan belum terlihat pada screenshot) |
 | 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout | Ya |
 
 Saran teman : Menurut saya, jarak antara bagian Data Anggota, Kontak, dan Persetujuan bisa sedikit ditambah agar tampilan form lebih rapi dan nyaman dilihat. (dinilai oleh Asma Nur Patmi_2410010342)
