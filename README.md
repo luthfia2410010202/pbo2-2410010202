@@ -9,10 +9,11 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 ___________________________
 | Bagian | Panel | Layout |
 | ------ | ----- | ------ |
-| Jendela |
-| Header |
-| Isi form |
-| Tombol |
+| Jendela | JFrame | BorderLayout
+| Header (North) | headerPanel | BoxLayout, Y Axis
+| Pembungkus (Center) | isiPanel | BordeLayout
+| Isi form (North di isiPanel) | formPanel | GidBagLayout
+| Tombol (South) | tombolPanel | FlowLayout, Right
 
 ### Screenshot hasil
 ![Mode terang](p03-komponen-gui/tiket%20travel%20mode%20terang.png)
