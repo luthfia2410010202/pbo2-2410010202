@@ -271,7 +271,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(persetujuancheck, gridBagConstraints);
 
-        isiPanel.add(formPanel, java.awt.BorderLayout.PAGE_START);
+        isiPanel.add(formPanel, java.awt.BorderLayout.NORTH);
 
         getContentPane().add(isiPanel, java.awt.BorderLayout.CENTER);
 
@@ -284,7 +284,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         daftarButton.setText("Daftar");
         tombolPanel.add(daftarButton);
 
-        getContentPane().add(tombolPanel, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(tombolPanel, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
