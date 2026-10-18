@@ -30,7 +30,7 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 | Tombol (South) | tombolPanel | FlowLayout, Right |
 
 ### Screenshot hasil dan foto
-![Foto sketsa](p04-layout-manager/foto%20sketsa.jpeg)
+![Foto sketsa](p04-layout-manager/foto%20sketsa%20form.jpeg)
 
 ![Tab design](p04-layout-manager/tab%20design%20anggota%20perpustakaan.png)
 
