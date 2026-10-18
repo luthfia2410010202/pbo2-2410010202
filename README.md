@@ -23,11 +23,11 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 ### Screenshot hasil dan foto
 ![Foto sketsa](p04-layout-manager/foto%20sketsa.jpeg)
 
+![Tab design](p04-layout-manager/tab%20design%20anggota%20perpustakaan.png)
+
 ![Ukuran awal](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20awal.png)
 
-![Saat dilebarkan](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20dilebarkan.png)
-
-![Tab design](p04-layout-manager/tab%20design%20anggota%20perpustakaan.png)
+![Saat dilebarkan](p04-layout-manager/hasil%20form%20anggota%20perputakaan%20dilebarkan.png)
 
 ### Eksperimen
 [Praktikum 2](p04-layout-manager/eksperimen%20praktikum%202.txt)
