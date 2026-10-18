@@ -21,7 +21,6 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 [Refleksi bagian G](p04-layout-manager/refleksi%20bagian%20G.txt)
 
 ### Tabel rancangan
-___________________________
 | Bagian | Panel | Layout |
 | ------ | ----- | ------ |
 | Jendela | JFrame | BorderLayout
@@ -43,6 +42,9 @@ ___________________________
 [Praktikum 2](p04-layout-manager/eksperimen%20praktikum%202.txt)
 
 [Praktikum 4](p04-layout-manager/Eksperimen%20praktikum%204.txt)
+
+### Penilaian dan saan dari teman
+
 
 ### Deklarasi penggunaan AI
 Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tidak paham, membantu mengatasi kotak Alamat yang gepeng saat komponen Persetujuan ditambahkan, menyusun draft jawaban pertanyaan refleksi lalu saya pahami dan tulis ulang dengan kata-kata saya sendiri, dan juga membantu mengganti pesan commit di GitHub melalui cmd.
