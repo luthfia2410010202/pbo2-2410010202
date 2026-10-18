@@ -16,6 +16,7 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 [Refleksi bagian G](p03-komponen-gui/refleksi%20bagian%20G.pdf)
 
 
+
 ## PERTEMUAN 4 - LAYOUT MANAGER
 ### Refleksi
 [Refleksi bagian G](p04-layout-manager/refleksi%20bagian%20G.txt)
@@ -23,13 +24,11 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 ### Screenshot hasil dan foto
 ![Foto sketsa](p04-layout-manager/foto%20sketsa.jpeg)
 
-![Tabel rancangan](p04-layout-manager/tabel%20rancangan.png)
-
 ![Ukuran awal](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20awal.png)
 
 ![Saat dilebarkan](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20dilebarkan.png)
 
-![Tab design](p04-layout-manager/design%20form%20anggota%20perpustakaan.png)
+![Tab design](p04-layout-manager/tab%20design%20form%20anggota%20perpustakaan.png)
 
 ### Eksperimen
 [Praktikum 2](p04-layout-manager/eksperimen%20praktikum%202.txt)
