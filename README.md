@@ -58,4 +58,4 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 Saran : 
 
 ### Deklarasi penggunaan AI
-Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tidak paham, membantu mengatasi kotak Alamat yang gepeng saat komponen Persetujuan ditambahkan, menyusun draft jawaban pertanyaan refleksi lalu saya pahami dan tulis ulang dengan kata-kata saya sendiri, dan juga membantu mengganti pesan commit di GitHub melalui cmd.
+Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tidak paham, membantu mengatasi kotak Alamat yang gepeng saat komponen Persetujuan ditambahkan, menyusun draft jawaban pertanyaan refleksi lalu saya pahami dan tulis ulang dengan kata-kata saya sendiri, dan juga membantu mengganti pesan commit di GitHub melalui cmd. Ada juga bagian penilaian bagian 7 untuk menilai punya teman, saya bingung antara ya atau belum jadi saya minta saran ke claude.
