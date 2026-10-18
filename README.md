@@ -23,11 +23,11 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 ### Tabel rancangan
 | Bagian | Panel | Layout |
 | ------ | ----- | ------ |
-| Jendela | JFrame | BorderLayout
-| Header (North) | headerPanel | BoxLayout, Y Axis
-| Pembungkus (Center) | isiPanel | BordeLayout
-| Isi form (North di isiPanel) | formPanel | GidBagLayout
-| Tombol (South) | tombolPanel | FlowLayout, Right
+| Jendela | JFrame | BorderLayout |
+| Header (North) | headerPanel | BoxLayout, Y Axis |
+| Pembungkus (Center) | isiPanel | BordeLayout |
+| Isi form (North di isiPanel) | formPanel | GidBagLayout |
+| Tombol (South) | tombolPanel | FlowLayout, Right |
 
 ### Screenshot hasil dan foto
 ![Foto sketsa](p04-layout-manager/foto%20sketsa.jpeg)
@@ -43,17 +43,17 @@ Membuat aplikasi tiket travel menggunakan Komponen GUI Java Swing.
 
 [Praktikum 4](p04-layout-manager/Eksperimen%20praktikum%204.txt)
 
-### Penilaian dan saan dari teman
-| No | Pemeriksaan | Ya atau Belum
-| -- | ----------- | --------------
-| 1 | Label singkat, jelas, dan sejajar 
-| 2 | Isian dikelompokkan dengan judul bagian 
-| 3 | Placeholder dipakai untuk isian yang punya format 
-| 4 | Komponen sesuai jenis data 
-| 5 | Tombol utama menonjol dan berada di kanan bawah 
-| 6 | Jarak antar komponen konsisten 
-| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan 
-| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout  
+### Penilaian dan saran dari teman
+| No | Pemeriksaan | Ya atau Belum |
+| -- | ----------- | -------------- |
+| 1 | Label singkat, jelas, dan sejajar |
+| 2 | Isian dikelompokkan dengan judul bagian |
+| 3 | Placeholder dipakai untuk isian yang punya format |
+| 4 | Komponen sesuai jenis data |
+| 5 | Tombol utama menonjol dan berada di kanan bawah |
+| 6 | Jarak antar komponen konsisten |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan |
+| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout |
 
 Saran : 
 
