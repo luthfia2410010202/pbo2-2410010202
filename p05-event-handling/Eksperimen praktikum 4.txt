@@ -1,0 +1,10 @@
+1. Pesan tercetak 2 kali
+Mengapa satu tombol sebaiknya hanya memakai satu cara?
+Karena jika satu tombol didaftarkan ke beberapa listener atau cara sekaligus (seperti lewat lambda di konstruktor dan Event handler NetBeans secara bersamaan), akan terjadi duplikasi eksekusi kode. Hal ini membuat alur program menjadi tidak bersih, memboroskan sumber daya, serta mempersulit proses debugging jika terjadi bug pada aplikasi.
+
+2. Tab Design:
+Mengubah jumlah kolom operatorPanel dari 4 menjadi 5 kolom agar muat untuk tombol baru, kemudian meanmbahkan JButton untuk tombol % dengan variable modulusButton   
+Tab Source:
+Menambahkan baris kode aksi pendengar (action listener) untuk modulusButton di dalam konstruktor menggunakan ekspresi lambda (modulusButton.addActionListener(e -> hitung('%'));), serta menambahkan logika kondisi case '%' pada fungsi hitung(char operator) untuk memproses operasi modulus (hasil = a % b;).
+
+3. Kursor langsung berada di isian pertama karena di dalam blok kode aksi tombol Hapus tersebut terdapat perintah angka1Field.requestFocusInWindow();. Perintah inilah yang secara otomatis membuat fokus kursor untuk kembali berpindah dan aktif di kotak teks isian pertama, sehingga pengguna bisa langsung mengetik angka baru tanpa harus mengklik kotak tersebut menggunakan mouse.

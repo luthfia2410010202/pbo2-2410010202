@@ -1,0 +1,5 @@
+1. Ada 2 kali pesan tercetak setiap pilihan diganti
+
+2. Karena event keyPressed pada saat tombol keyboard baru ditekan (sebelum karakter tersebut benar-benar masuk dan tertulis ke dalam komponen celciusField). Jadi, ketika fungsi konversi() langsung dijalankan saat itu juga, program hanya membaca data dari karakter-karakter sebelumnya saja sehingga karakter terakhir yang baru diketik belum terbaca (terlambat satu karakter).
+
+3. Muncul pesan kesalahan (stack trace) berupa java.lang.NumberFormatException karena program gagal mengonversi teks berupa huruf ("abc") menjadi tipe data angka (double).
