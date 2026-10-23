@@ -60,3 +60,16 @@ Saran teman : Menurut saya, jarak antara bagian Data Anggota, Kontak, dan Perset
 
 ### Deklarasi penggunaan AI
 Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tidak paham, membantu mengatasi kotak Alamat yang gepeng saat komponen Persetujuan ditambahkan, menyusun draft jawaban pertanyaan refleksi lalu saya pahami dan tulis ulang dengan kata-kata saya sendiri, dan juga membantu mengganti pesan commit di GitHub melalui cmd. Ada juga bagian penilaian nomor 7 untuk menilai punya teman, saya bingung antara ya atau belum jadi saya minta saran ke claude.
+
+
+## PERTEMUAN 5 - EVENT HANDLING
+### Tabel pengamatan
+| No | Tindakan | Event yang tercatat |
+| 1 | Arahkan kursor ke tombol, lalu jauhkan | MouseEvent, kursor masuk ke tombol dan kursor keluar dari tombol |
+| 2 | Klik tombol Klik saya | ActionEvent, tombol diklik |
+| 3 | Centang lalu hapus centang Aktifkan fitur | ItemEvent, kontak dicentang dan centang dihapus |
+| 4 | Ganti pilihan dari Pagi menjadi Malam | ItemEvent, memilih malam |
+| 5 | Klik isian, lalu ketik kata "abc" | FocusEvent, isian mendapatkan fokus dan KeyEvent, mengetik huruf abc |
+| 6 | Klik tombol setelah mengetik di isian | FocusEvent, isian kehilangan fokus dan ActionEvent, tombol diklik |
+
+### Jawaban eksperimen
