@@ -18,7 +18,7 @@
 
 ![Ukuran awal](hasil%20form%20anggota%20perpustakaan%20awal.png)
 
-![Saat dilebarkan](Hasil%20form%20anggota%20perpustakaan%20dilebarkan.png)
+![Saat dilebarkan](Hasil%20form%20anggota%20pepustakaan%20dilebarkan.png)
 
 ### Eksperimen
 [Praktikum 2](eksperimen%20praktikum%202.txt)
