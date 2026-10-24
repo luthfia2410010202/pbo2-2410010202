@@ -75,6 +75,7 @@ Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tida
 
 ### Jawaban eksperimen
 [Praktikum 3](p05-event-handling/Eksperimen%20praktikum%203.txt)
+
 [Praktikum 4](p05-event-handling/Eksperimen%20praktikum%204.txt)
 
 ### Peta event pada FormAnggotaPerpustakaan
@@ -88,7 +89,9 @@ Saya menggunakan Gemini dan Claude untuk memahami modul praktikum yang saya tida
 
 ### Tangkapan layar
 ![Tangkapan layar jendela properties bagian event untuk tombol daftar](p05-event-handling/Tangkapan%20layar%20jendela%20Properties%20bagian%20Events%20untuk%20tombol%20Daftar.png)
+
 ![Tangkapan layar dialog ringkasan](p05-event-handling/Tangkapan%20layar%20dialog%20ringkasan.png)
+
 ![Tangkapan layar dialog konfirmasi keluar](p05-event-handling/Tangkapan%20layar%20dialog%20konfirmasi%20keluar.png)
 
 ### Deklarasi penggunaan AI
