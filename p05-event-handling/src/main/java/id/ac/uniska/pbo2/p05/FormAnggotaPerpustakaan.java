@@ -184,7 +184,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 80, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(mahasiswaRadio, gridBagConstraints);
 
         dosenRadio.setText("Dosen");
@@ -193,7 +193,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 100, 4, 0);
         formPanel.add(dosenRadio, gridBagConstraints);
 
         umumRadio.setText("Umum");
