@@ -12,18 +12,18 @@
 | Tombol (South) | tombolPanel | FlowLayout, Right |
 
 ### Screenshot hasil dan foto
-![Foto sketsa](p04-layout-manager/foto%20sketsa%20form.jpeg)
+![Foto sketsa](foto%20sketsa%20form.jpeg)
 
-![Tab design](p04-layout-manager/tab%20design%20anggota%20perpustakaan.png)
+![Tab design](tab%20design%20anggota%20perpustakaan.png)
 
-![Ukuran awal](p04-layout-manager/hasil%20form%20anggota%20perpustakaan%20awal.png)
+![Ukuran awal](hasil%20form%20anggota%20perpustakaan%20awal.png)
 
-![Saat dilebarkan](p04-layout-manager/Hasil%20form%20anggota%20pepustakaan%20dilebarkan.png)
+![Saat dilebarkan](Hasil%20form%20anggota%20perpustakaan%20dilebarkan.png)
 
 ### Eksperimen
-[Praktikum 2](p04-layout-manager/eksperimen%20praktikum%202.txt)
+[Praktikum 2](eksperimen%20praktikum%202.txt)
 
-[Praktikum 4](p04-layout-manager/Eksperimen%20praktikum%204.txt)
+[Praktikum 4](Eksperimen%20praktikum%204.txt)
 
 ### Penilaian dan saran dari teman
 | No | Pemeriksaan | Ya atau Belum |
