@@ -1,0 +1,13 @@
+Eksperimen
+
+1. Tabel tidak langsung berubah atau menampilkan data baru secara visual di layar, hanya pesan status atau jumlah data yg berubah bahwa ada data yg ditambahkan
+
+2. Nama yang muncul di dialog konfirmasi adalah Budi Santoso
+
+3. kontak yg ditambahkan jadi tertindih dengan yg lain, misal klik nama yg dijendela utama lalu klik tombol ubah maka tambah akan tertindih oleh ubah
+
+4. Tombol Ubah dan Hapus (termasuk tombol pintas Ctrl+E dan Ctrl+D) tidak berfungsi kalau datanya tidak diklik/dipilih terlebih dahulu, karena sistem butuh mendeteksi baris mana yang mau diubah atau dihapus
+
+5. Baris kode yang berubah adalah bagian pengaturan akseleratornya (pada KeyEvent.VK_D), di mana yang awalnya menyertakan kombinasi tombol Ctrl (menggunakan InputEvent.CTRL_DOWN_MASK) kini berubah menjadi tombol DELETE saja sesuai pengaturan baru yang kita buat.
+
+6. Pesan error yang muncul di konsol adalah IllegalArgumentException: Cannot set a null TableModel. Hal ini terjadi karena komponen tabel di dalam initComponents() mencoba memuat data dari objek model sebelum objek tersebut diinisialisasi, karena inisialisasi model dipindah ke bawah setelah initComponents() 
