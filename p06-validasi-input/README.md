@@ -1,1 +1,2 @@
-
+### Deklarasi penggunaan AI
+Saya memakai Gemini dan Claude untuk memahami bagian modul yang belum saya pahami. Claude membantu menjelaskan cara menaruh method bantu validasi di kelas form, memperbaiki error kode (method kembar, kurung kurawal berlebih, nama package), menyamakan tampilan FormAnggotaPerpustakaan dengan form contoh di modul, dan menyusun draft jawaban eksperimen yang kemudian saya coba dan tulis ulang dengan kata-kata saya sendiri. Claude juga membantu mengatasi error git push dan merge di cmd. Pengujian form dan pencatatan hasil eksperimen saya kerjakan sendiri.
