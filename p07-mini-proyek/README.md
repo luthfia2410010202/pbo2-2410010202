@@ -1,1 +1,2 @@
-
+### Deklarasi penggunaan AI
+Saya memakai Claude dan Gemini untuk memahami bagian modul yang belum saya pahami. Untuk mini proyek Katalog Buku, Claude membantu saya menyesuaikan Aplikasi Kontak menjadi Katalog Buku, termasuk membuatkan kerangka kode Buku, Status, dan BukuTableModel, memperbaiki DialogBuku (aturan validasi tahun) dan KatalogBuku, serta membantu memperbaiki error saat build, misalnya sisa nama kontak dan handler yang tidak cocok.
