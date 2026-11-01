@@ -123,7 +123,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         judulLabel.setText("Form Anggota Perpustakaan");
         headerPanel.add(judulLabel);
 
-        keteranganLabel.setText("Silakan isi data keanggotaan dengan benar");
+        keteranganLabel.setText("Semua isian wajib di isi kecuali alamat");
         headerPanel.add(keteranganLabel);
 
         getContentPane().add(headerPanel, java.awt.BorderLayout.NORTH);
@@ -312,6 +312,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(nomorLabel, gridBagConstraints);
 
+        nomorField.setToolTipText("Diawali 08, berisi 10 sampai 13 digit angka");
         nomorField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nomorFieldFocusLost(evt);

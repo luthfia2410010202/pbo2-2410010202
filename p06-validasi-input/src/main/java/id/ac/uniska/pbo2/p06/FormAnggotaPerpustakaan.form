@@ -64,7 +64,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="keteranganLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Silakan isi data keanggotaan dengan benar"/>
+            <Property name="text" type="java.lang.String" value="Semua isian wajib di isi kecuali alamat"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -332,6 +332,9 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="nomorField">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Diawali 08, berisi 10 sampai 13 digit angka"/>
+              </Properties>
               <Events>
                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="nomorFieldFocusLost"/>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="nomorFieldKeyTyped"/>
