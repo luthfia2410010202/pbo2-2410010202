@@ -7,7 +7,10 @@ Nama peninjau	: Asma Nut Patmi_2410010342
 ![Foto atau pindaian lembar peer review yang Anda terima dari teman](peer%20review.jpeg)
 
 ### Tabel singkat berisi temuan dari teman, perbaikan yang Anda lakukan, dan commit yang memuat perbaikan 
-
+| No | Heuristik | Temuan | Perbaikan | Commit |
+| 1 | Bantuan dan Dokumentasi | Tidak ada tooltip pada kolom NPM dan Nomor HP. | Menambahkan tooltip pada npmField dan hpField. | P06: validasi input dan umpan balik pada form anggota |
+| 2 | Bantuan dan Dokumentasi | Tidak ada petunjuk singkat penggunaan aplikasi. | Mengubah teks keteranganLabel menjadi “Semua isian wajib di isi kecuali alamat | P06: validasi input dan umpan balik pada form anggota |
+| 3 | Bantuan dan Dokumentasi | Tidak ada README yang menjelaskan cara menjalankan dan menggunakan aplikasi. | Menambahkan bagian “Cara Menjalankan” dan “Cara Menggunakan” di README. | P06: validasi input dan umpan balik pada form anggota |
 
 **Cara Menjalankan**
 1. Buka proyek di Apache NetBeans.
