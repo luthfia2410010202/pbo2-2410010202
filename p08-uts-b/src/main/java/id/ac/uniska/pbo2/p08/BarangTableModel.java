@@ -9,12 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 /**
- * Nama: Luthfia Agustina
- * NPM: 2410010202
+ *
  * @author ACER
  */
 public class BarangTableModel extends AbstractTableModel {
-
+   
     private static final String[] NAMA_KOLOM =
             {"Nama Barang", "Kategori", "Harga", "Jumlah", "Subtotal"};
     private static final long BATAS_DISKON = 100_000;

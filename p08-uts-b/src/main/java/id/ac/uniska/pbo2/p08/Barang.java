@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package id.ac.uniska.pbo2.p08;
-/* Nama: Luthfia Agustina
-NPM: 2410010202
-*/
+
 /**
- *
+ * Nama: Luthfia Agustina
+ * NPM: 2410010202
  * @author ACER
  */
 public class Barang {

@@ -3,21 +3,97 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package id.ac.uniska.pbo2.p08;
-
+import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
+import javax.swing.JComponent;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableRowSorter;
 /**
- *
+ * Nama: Luthfia Agustina
+ * NPM: 2410010202
  * @author ACER
  */
+
 public class DaftarBelanja extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DaftarBelanja.class.getName());
 
-    /**
-     * Creates new form DaftarBelanja
-     */
+    private final BarangTableModel modelBarang = new BarangTableModel();
+
     public DaftarBelanja() {
         initComponents();
+        daftarTable.setModel(modelBarang);
+
+        // kolom Harga, Jumlah, Subtotal rata kanan
+        DefaultTableCellRenderer kanan = new DefaultTableCellRenderer();
+        kanan.setHorizontalAlignment(SwingConstants.RIGHT);
+        daftarTable.getColumnModel().getColumn(2).setCellRenderer(kanan);
+        daftarTable.getColumnModel().getColumn(3).setCellRenderer(kanan);
+        daftarTable.getColumnModel().getColumn(4).setCellRenderer(kanan);
+
+        // placeholder (fitur FlatLaf)
+        hargaField.putClientProperty("JTextField.placeholderText", "Tanpa titik, contoh 15000");
+
+        // Enter = tombol Tambah
+        getRootPane().setDefaultButton(tambahButton);
+
+        statusLabel.setForeground(Color.RED);
+        setLocationRelativeTo(null);
+        perbaruiRingkasan();
     }
+
+    private void tampilkanError(String pesan, JComponent isianSalah) {
+        statusLabel.setText(pesan);
+        isianSalah.requestFocusInWindow();
+    }
+
+    private void kosongkanForm() {
+        namaField.setText("");
+        hargaField.setText("");
+        kategoriCombo.setSelectedIndex(0);
+        jumlahSpinner.setValue(1);
+        statusLabel.setText("");
+        namaField.requestFocusInWindow();
+    }
+
+    private void perbaruiRingkasan() {
+        statusLabel.setText("Total " + BarangTableModel.formatRupiah(modelBarang.hitungTotal())
+                + ", diskon " + BarangTableModel.formatRupiah(modelBarang.hitungDiskon())
+                + ", bayar " + BarangTableModel.formatRupiah(modelBarang.hitungBayar()));
+    }
+
+    private void tambahButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        String nama = namaField.getText().trim();
+        if (nama.isEmpty()) {
+            tampilkanError("Nama barang wajib diisi", namaField);
+            return;
+        }
+        if (modelBarang.sudahAda(nama)) {
+            tampilkanError("Barang " + nama + " sudah ada di daftar", namaField);
+            return;
+        }
+
+        String teksHarga = hargaField.getText().trim();
+        if (!teksHarga.matches("\\d{1,8}")
+                || Long.parseLong(teksHarga) < 1
+                || Long.parseLong(teksHarga) > 10_000_000) {
+            tampilkanError("Harga harus angka 1 sampai 10000000", hargaField);
+            return;
+        }
+
+        Kategori kategori = Kategori.dariLabel((String) kategoriCombo.getSelectedItem());
+        int jumlah = (int) jumlahSpinner.getValue();
+
+        modelBarang.tambah(new Barang(nama, kategori, Long.parseLong(teksHarga), jumlah));
+        kosongkanForm();
+        perbaruiRingkasan();
+    }
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        kosongkanForm();
+    }
+       
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,19 +104,104 @@ public class DaftarBelanja extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        formPanel = new javax.swing.JPanel();
+        atasPanel = new javax.swing.JPanel();
+        labelPanel = new javax.swing.JPanel();
+        namaLabel = new javax.swing.JLabel();
+        kategoriLabel = new javax.swing.JLabel();
+        hargaLabel = new javax.swing.JLabel();
+        jumlahLabel = new javax.swing.JLabel();
+        isianPanel = new javax.swing.JPanel();
+        namaField = new javax.swing.JTextField();
+        kategoriCombo = new javax.swing.JComboBox<>();
+        hargaField = new javax.swing.JTextField();
+        jumlahSpinner = new javax.swing.JSpinner();
+        tabelPanel = new javax.swing.JPanel();
+        tableScroll = new javax.swing.JScrollPane();
+        daftarTable = new javax.swing.JTable();
+        bawahPanel = new javax.swing.JPanel();
+        tombolPanel = new javax.swing.JPanel();
+        tambahButton = new javax.swing.JButton();
+        bersihkanButton = new javax.swing.JButton();
+        statusLabel = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Daftar Belanja");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        formPanel.setLayout(new java.awt.BorderLayout(12, 0));
+
+        atasPanel.setLayout(new java.awt.BorderLayout());
+
+        labelPanel.setLayout(new java.awt.GridLayout(0, 1, 0, 8));
+
+        namaLabel.setLabelFor(namaField);
+        namaLabel.setText("Nama Barang");
+        labelPanel.add(namaLabel);
+
+        kategoriLabel.setLabelFor(kategoriCombo);
+        kategoriLabel.setText("Kategori");
+        labelPanel.add(kategoriLabel);
+
+        hargaLabel.setLabelFor(hargaField);
+        hargaLabel.setText("Harga (Rp)");
+        labelPanel.add(hargaLabel);
+
+        jumlahLabel.setLabelFor(jumlahSpinner);
+        jumlahLabel.setText("Jumlah");
+        labelPanel.add(jumlahLabel);
+
+        atasPanel.add(labelPanel, java.awt.BorderLayout.WEST);
+
+        isianPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        isianPanel.setLayout(new java.awt.GridLayout(0, 1, 0, 8));
+
+        namaField.setColumns(22);
+        isianPanel.add(namaField);
+
+        kategoriCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        isianPanel.add(kategoriCombo);
+
+        hargaField.setColumns(22);
+        isianPanel.add(hargaField);
+        isianPanel.add(jumlahSpinner);
+
+        atasPanel.add(isianPanel, java.awt.BorderLayout.CENTER);
+
+        formPanel.add(atasPanel, java.awt.BorderLayout.PAGE_START);
+
+        tabelPanel.setLayout(new java.awt.BorderLayout());
+
+        daftarTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nama Barang", "Kategori", "Harga (Rp)", "Jumlah", "Subtotal"
+            }
+        ));
+        tableScroll.setViewportView(daftarTable);
+
+        tabelPanel.add(tableScroll, java.awt.BorderLayout.CENTER);
+
+        formPanel.add(tabelPanel, java.awt.BorderLayout.CENTER);
+
+        bawahPanel.setLayout(new java.awt.BorderLayout());
+
+        tambahButton.setText("Tambah");
+        tombolPanel.add(tambahButton);
+
+        bersihkanButton.setText("Bersihkan");
+        tombolPanel.add(bersihkanButton);
+
+        bawahPanel.add(tombolPanel, java.awt.BorderLayout.PAGE_START);
+        bawahPanel.add(statusLabel, java.awt.BorderLayout.CENTER);
+
+        formPanel.add(bawahPanel, java.awt.BorderLayout.PAGE_END);
+
+        getContentPane().add(formPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -65,11 +226,31 @@ public class DaftarBelanja extends javax.swing.JFrame {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+FlatLightLaf.setup();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new DaftarBelanja().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel atasPanel;
+    private javax.swing.JPanel bawahPanel;
+    private javax.swing.JButton bersihkanButton;
+    private javax.swing.JTable daftarTable;
+    private javax.swing.JPanel formPanel;
+    private javax.swing.JTextField hargaField;
+    private javax.swing.JLabel hargaLabel;
+    private javax.swing.JPanel isianPanel;
+    private javax.swing.JLabel jumlahLabel;
+    private javax.swing.JSpinner jumlahSpinner;
+    private javax.swing.JComboBox<String> kategoriCombo;
+    private javax.swing.JLabel kategoriLabel;
+    private javax.swing.JPanel labelPanel;
+    private javax.swing.JTextField namaField;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JLabel statusLabel;
+    private javax.swing.JPanel tabelPanel;
+    private javax.swing.JScrollPane tableScroll;
+    private javax.swing.JButton tambahButton;
+    private javax.swing.JPanel tombolPanel;
     // End of variables declaration//GEN-END:variables
 }
